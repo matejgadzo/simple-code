@@ -1,0 +1,80 @@
+@import "/src/index.scss";
+
+.hero {
+  max-width: 75%;
+  .hero-title {
+    color: $primary-blue;
+    font-size: 5rem;
+    font-weight: 1000;
+  }
+
+  .hero-text {
+    overflow-wrap: normal;
+    width: 80%;
+    color: $text-color;
+    font-size: 1.5rem;
+  }
+}
+
+.actions{
+    display: flex;
+    .action-1 {
+        color: white;
+        background-color: $primary-blue;
+        border: none;
+        margin: 2rem;
+        border-radius: 5px;
+        font-size: 1.3rem;
+        padding: 0.55rem 5rem;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.15);
+        }
+      }
+      
+      .action-2 {
+        color: $primary-blue;
+        background-color: white;
+        border: $primary-blue 0.2rem solid;
+        margin: 2rem;
+        border-radius: 7px;
+        font-size: 1.3rem;
+        padding: 0.55rem 5rem;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+      }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero {
+      max-width: 45%;
+    .hero-title {
+      font-size: 2rem;
+    }
+    .hero-text{
+        color: $primary-color-light;
+        width: 100%;
+        overflow: auto;
+    }
+  }
+  .actions{
+      display: inline;
+
+      .action-1{
+          margin: 1rem ;
+          font-size: 1rem;
+      }
+      .action-2{
+          margin: 1rem ;
+          font-size: 1rem;
+      }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero{
+    max-width: 90%;
+  }
+}

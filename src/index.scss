@@ -1,0 +1,43 @@
+$primary-color: #37447E;
+$primary-color-light: #111B47;
+$background-color: #FBFBFD;
+$primary-blue: #091133;
+$text-color: #505F98;
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ /* 
+  the background clashes with the text constantly while resizing  proposed solution =====>>>>
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('./assets/designer_1.png');
+ */ 
+  background: url('./assets/designer_1.png');
+  background-color: $background-color;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  height: 100vh;
+}
+
+.content-wrapper{
+  margin: 1.75rem 1.75rem 0 1.75rem;
+  padding: 2.5rem 2.5rem 0 2.5rem;
+
+}
+
+@media screen and (max-width: 900px) {
+    body{
+      background: url(./assets/simple-code-small.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    .content-wrapper{
+      margin: 1rem;
+      padding: 2rem;
+    }
+}

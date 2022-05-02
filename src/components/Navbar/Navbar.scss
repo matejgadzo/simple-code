@@ -1,0 +1,128 @@
+@import "/src/index.scss";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  height: 10%;
+
+  .nav-links {
+    padding-inline-start: 0 !important;
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0 !important;
+    }
+    li {
+      display: inline-flex;
+      margin-right: 4rem;
+      a {
+        text-decoration: none;
+        color: $text-color;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .nav-title {
+    color: $primary-color;
+    font-size: 2.5rem;
+  }
+
+  .buy-button {
+    color: white;
+    background-color: $primary-blue;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    padding: 0.55rem 6rem;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+}
+.mobile-menu {
+  display: none;
+}
+.navigation-menu {
+  margin-left: auto;
+  ul {
+    display: flex;
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+    margin: 0 1rem;
+
+    a {
+      text-decoration: none;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.brand-name{
+    color: $primary-blue;
+    font-size: 2.3rem;
+    text-decoration: none;
+    font-weight: 900;
+    box-sizing: border-box;
+}
+.navigation{
+    display: flex;
+}
+
+.hamburger {
+  border: 0;
+  height: 50px;
+  width: 50px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: $primary-blue;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar{
+      display: none;
+  }
+  .mobile-menu{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+  }
+  .hamburger {
+    display: flex;
+  }
+  
+  .navigation-menu {
+    ul {
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      display: none;
+    }
+    li {
+      text-align: left;
+      margin: 1.5rem;
+
+      a {
+        color: $primary-blue;
+        width: 100%;
+        padding: 1.5rem 0;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .navigation-menu.expanded ul {
+    display: block;
+    background: $background-color;
+    margin-right: 2rem;
+    margin-top: 3.5rem;
+  }
+}
